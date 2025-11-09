@@ -1,0 +1,27 @@
+.my-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.left-container,
+.right-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.left-container {
+  background-color: wheat;
+  flex-direction: column;
+}
+
+.right-container {
+  background-color: tomato;
+}
+
+
