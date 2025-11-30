@@ -72,6 +72,9 @@
   flex-wrap: wrap;
 }
 
+.input-group textarea {
+  height: 200px;
+}
 /* right-container Setup*/
 .right-container {
   display: flex;
