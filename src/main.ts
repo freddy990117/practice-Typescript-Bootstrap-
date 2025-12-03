@@ -70,23 +70,23 @@ const newAccording = function (person: Person) {
 
   accrordingContatiner.innerHTML += `
   <div class="accordion-item">
-              <h2 class="accordion-header" id="${personId}"> 
+              <h2 class="accordion-header" id="accordion-${personId}"> 
                 <button
                   id="collapse-button"
                   class="accordion-button"
                   type="button"
                   data-bs-toggle="collapse"
-                  data-bs-target="#${collapseId}"
+                  data-bs-target="#collapse-${collapseId}"
                   aria-expanded="true"
-                  aria-controls="${collapseId}"
+                  aria-controls="collapse-${collapseId}"
                 >
                   Request from : ${person.Name}
                 </button>
               </h2>
               <div
-                id="${collapseId}"
+                id="collapse-${collapseId}"
                 class="accordion-collapse collapse"
-                aria-labelledby="${personId}"s
+                aria-labelledby="accordion-${personId}"s
                 data-bs-parent="#accordionExample"
               >
                 <div class="accordion-body" id="collapse-content">
