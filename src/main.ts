@@ -31,6 +31,8 @@ submitBtn.addEventListener("click", (e) => {
   const person = newPerson();
   // 隨後會帶入到表單的建立
   newAccording(person);
+  // 清除表單中的內容
+  clearInput();
 });
 
 // 建立一個 Person fn 要符合 Person Interface
@@ -105,8 +107,22 @@ const newAccording = function (person: Person) {
   `;
 };
 
+// 清空表單中輸入的資訊 （因為他是行為，不需要符合 Person Interface)
+const clearInput = function () {
+  personPhone.value = "";
+  personName.value = "";
+  personJob.value = "";
+  personEmail.value = "";
+  personMessage.value = "";
+
+  // 跑一次迴圈讓勾選重置
+  chechBoxes.forEach((box) => {
+    box.checked = false;
+  });
+};
 // //TODO 按下 submit-form 後，一個行為是將資料放入表單中（已完成，但是後續結構需要更改為每個使用者為新的 According Item），一個行為是 依照 id 新增 According Item，而這樣我需要：
-// 1.建立一個 fn 用於存放新的 Person 資訊（要符合 Person 的 interface 結構）
-// 2.建立一個 fn 用於「新增」 According Item （According Item 的 id 從 0 開始 ）
-// 3.更改 submit btn 的行為，按下之後先：「設定一個變數放置 1 的資訊（變數會是一個 fn」 「在到 2 中帶入參數 1 的參數」
+// 1.建立一個 fn 用於存放新的 Person 資訊（要符合 Person 的 interface 結構）✅
+// 2.建立一個 fn 用於「新增」 According Item （According Item 的 id 從 0 開始 ）✅
+// 3.更改 submit btn 的行為，按下之後先：「設定一個變數放置 1 的資訊（變數會是一個 fn」 「在到 2 中帶入參數 1 的參數」✅
 // 4.設定哪些 input 需要 required 5.設定無 item 時的顯示畫面 6.新增完成後，右下角跳出新增完成
+// 7.清除表單上的內容 ✅
