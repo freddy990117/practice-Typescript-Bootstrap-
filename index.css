@@ -6,6 +6,7 @@
   text-align: center;
   margin: 0;
   padding: 0;
+  background-color: #f9fafb;
 }
 
 .left-container,
@@ -17,12 +18,8 @@
   align-items: center;
 }
 .left-container {
-  background-color: wheat;
   flex-direction: column;
-}
-
-.right-container {
-  background-color: tomato;
+  border-right: 1px solid black;
 }
 
 .img-container {
@@ -49,7 +46,6 @@
 .form-description input {
   outline: none;
   text-align: start;
-
   border-radius: 30px;
   padding-left: 6%;
   border-color: #7c3aed; /* 紫色邊框 */
@@ -73,6 +69,8 @@
 
 .input-group textarea {
   height: 200px;
+  border-color: #7c3aed; /* 紫色邊框 */
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2); /* 外圈亮光效果 */
 }
 /* right-container Setup*/
 .right-container {
@@ -86,6 +84,9 @@
   width: 100%;
 }
 
+.right-container .accordion-body {
+  background-color: #e5e7eb;
+}
 /* 手機 RWD 設定 */
 @media screen and (max-width: 390px) {
   .my-container {
