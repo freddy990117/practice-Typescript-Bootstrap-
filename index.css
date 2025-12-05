@@ -87,21 +87,21 @@
   width: 100%;
 }
 
-@media screen and (min-width: 390px) {
-  /* body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  } */
+/* 手機 RWD 設定 */
+@media screen and (max-width: 390px) {
   .my-container {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 200vh;
+    width: 100%;
   }
   .left-container {
-    width: 100%;
-    height: 100%;
+    height: 100vh;
   }
   .left-container h1 {
     padding: 1rem;
@@ -110,6 +110,10 @@
     margin: 0;
   }
   .left-container .input-group textarea {
-    height: 150px;
+    height: 190px;
+  }
+  .right-container {
+    height: 100vh;
+    width: 100%;
   }
 }
