@@ -63,8 +63,11 @@ const newPerson = function (): Person {
   };
 };
 
+const noData = document.getElementById("no-data") as HTMLDivElement;
 // 建立一個 fn 用於「新增」According Item (參數 person 會是使用者輸入的資訊)
 const newAccording = function (person: Person) {
+  if (noData) noData.style.display = "none";
+
   // 新增 id 的順序
   personId++;
   collapseId++;

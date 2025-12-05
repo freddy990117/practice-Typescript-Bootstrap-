@@ -170,3 +170,10 @@
     height: 100px;
   }
 }
+
+.no-data {
+  font-size: 2rem;
+  color: gray;
+  opacity: 0.3;
+  display: block;
+}
